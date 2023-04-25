@@ -1,12 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Fixed Header, Footer with Sidebar</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			background-color: #333;
+			color: #fff;
+			padding: 8px;
+            text-align: center;
+            z-index: 1;
+		}
+
+		main {
+			padding-top: 70px;
+			/* padding-bottom: 70px; */
+			/* overflow: auto; */
+		}
+
+		footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+            text-align: center;
+		}
+
+		.sidebar {
+			float: left;
+			width: 200px;
+			padding: 20px;
+            height: 600px;
+			background-color: #f2f2f2;
+		}
+
+		.image {
+			position: absolute;
+			top: 68px;
+			right: 2px;
+			width: 100px;
+		}
+
+		.text-block {
+			position: relative;
+			top: 10px;
+			left: 10px;
+		}
+ 
+		 .float-container {
+			overflow: auto;
+		} 
+
+		.float-child {
+			width: 50%;
+			float: left;
+			padding: 20px;
+            /* margin-left: 4px; */
+			/* background-color: #f2f2f2; */
+			box-sizing: border-box;
+            height: 600px;
+            
+		}
+	</style>
 </head>
 <body>
-    <p>initial setup</p>
+	<header>
+		<h1>Fixed Header</h1>
+	</header>
+	<main>
+		<div class="sidebar">
+			<h2>Sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at massa libero. Vestibulum eu tellus sodales, vestibulum arcu sit amet, blandit sapien.</p>
+		</div>
+		<div class="image">
+			<img src="https://via.placeholder.com/100x100" alt="placeholder image">
+		</div>
+		<div class="text-block">
+			<h2>Text Block</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at massa libero. Vestibulum eu tellus sodales, vestibulum arcu sit amet, blandit sapien.</p>
+		</div>
+		<div class="float-container">
+			<div class="float-child">
+				<h2>Float Child 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at massa libero. Vestibulum eu tellus sodales, vestibulum arcu sit amet, blandit sapien.</p>
+			</div>
+			<div class="float-child">
+				<h2>Float Child 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at massa libero. Vestibulum eu tellus sodales, vestibulum arcu sit amet, blandit sapien.</p>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<h3>Fixed Footer</h3>
+	</footer>
 </body>
 </html>
